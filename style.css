@@ -6,6 +6,14 @@
     padding: 10px;
   }
 
+  .header {
+    padding: 0.05%;
+    text-align: center;
+    background: black;
+    color: grey;
+    font-size: 20px;
+  }
+  
   .imagestodis {
     background-color: white;
     color: white;
@@ -15,4 +23,14 @@
     padding-right: 1%;
     width: 98%;
     height: 90%;
+  }
+
+  .footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
   }
