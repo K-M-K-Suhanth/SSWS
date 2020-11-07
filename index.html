@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Sai Collections</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -8,22 +9,36 @@
 Sai Collections
 
 </header>
-</br>
-<img src="images/images.jpg" alt="image1">
-</br>
-<img src="images/images.jpg" alt="image1">
-</br>
-<img src="images/images.jpg" alt="image1">
-</br>
-<img src="images/images.jpg" alt="image1">
-</br>
-<img src="images/images.jpg" alt="image1">
-</br>
-
+<div><!-- <div class="imagediv"> -->
+<br></br>
+<img src="images/images.jpg" alt="image" class="imagestodis">
+<br></br>
+<img src="images/images11.png" alt="image1" class="imagestodis">
+<br></br>
+<img src="images/images2.png" alt="image2" class="imagestodis">
+<br></br>
+<img src="images/images3.jpg" alt="image3" class="imagestodis">
+<br></br>
+<img src="images/images4.png" alt="image4" class="imagestodis">
+<br></br>
+</div>
 <footer>
 
     All rights reserved
 </footer>
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
 </body>
 
 
