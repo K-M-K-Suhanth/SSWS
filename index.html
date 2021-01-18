@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg"/>
 </head>
-<body>
+<body onload="imgloop()">
 
 <!-- <header>
 Sai Collections
@@ -13,7 +13,32 @@ Sai Collections
 <div class="header">
     <h3>Sai Collections</h3>
 </div>
-<div><!-- <div class="imagediv"> -->
+<div>
+<script type="text/javascript">
+function imgloop()
+  {
+    var ar = [];
+    var dir = 'sarees/';
+    var suff = ".jpeg";
+    var ser = 110701;
+    for(s=0; s<100; s++){
+      ar.push(dir+ser+suff);
+      ser++;  
+    }
+    for (i = 0; ar.length > i; i++)
+    {
+      var img = new Image(200,200);
+      img.src = ar[i];
+      var src = document.getElementById("elementid");
+      src.appendChild(img);
+    }
+
+  }
+</script>
+
+</div>
+<!-- <div class="imagediv"> -->
+<!-- <div>
 <br></br>
 <img src="sarees/110701.jpeg" alt="image1" class="imagestodis">
 <br></br><br></br>
@@ -53,12 +78,16 @@ Sai Collections
 <br></br><br></br>
 <img src="sarees/1107019.jpeg" alt="image19" class="imagestodis">
 <br></br><br></br>
+</div> -->
+
+
+<div id="elementid" class="imagediv">
 </div>
 <div class="footer">
   All rights reserved
 </div>
 
-<script>
+<!-- <script>
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -69,7 +98,10 @@ Sai Collections
       }
       prevScrollpos = currentScrollPos;
     }
-    </script>
+    </script> -->
+
+
+
 </body>
 
 

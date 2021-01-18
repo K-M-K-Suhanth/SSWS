@@ -1,0 +1,106 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Sai Collections</title>
+
+    <!-- Favicon  -->
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg"/>
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="css/core-style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="imgloop()">
+<div class="header">
+    <h3>Sai Collections</h3>
+</div>
+<div>
+    <script type="text/javascript">
+        function imgloop(){
+            var ar = [];
+    var dir = 'sarees/';
+    var suff = ".jpeg";
+    var ser = 110701;
+    for(s=0; s<20; s++){
+      ar.push(dir+ser+suff);
+      ser++;  
+    }
+            
+    
+    //   div.className = 'row';
+    for (i = 0; ar.length > i; i++)
+    {
+        var div = document.createElement('div');
+      div.innerHTML = `
+      <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                            <div class="single-product-wrapper">
+                                <div class="product-img">
+                                        <img src="`+ar[i]+`" alt="">
+                                </div>
+    
+                                <div class="product-description d-flex align-items-center justify-content-between">
+                                    <div class="product-meta-data">
+                                        <div class="line"></div>
+                                        <p class="product-price">₹180</p>
+                                        <a href="product-details.html">
+                                            <h6>Modern Chair</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+      `;
+            document.getElementById("mainDiv").appendChild(div);
+    }
+        }
+        </script>
+</div>
+<div class="main-content-wrapper d-flex clearfix">
+
+    <div class="amado_product_area section-padding-100">
+        <div class="container-fluid" id="mainDiv">
+                <!-- Single Product Area -->
+                <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                    <div class="single-product-wrapper">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                            <img src="sarees/110701.jpeg" alt="">
+                            <!-- Hover Thumb -->
+                            <!-- <img class="hover-img" src="img/product-img/product2.jpg" alt=""> -->
+                        </div>
+
+                        <!-- Product Description -->
+                        <div class="product-description d-flex align-items-center justify-content-between">
+                            <!-- Product Meta Data -->
+                            <div class="product-meta-data">
+                                <div class="line"></div>
+                                <p class="product-price">₹180</p>
+                                <a href="product-details.html">
+                                    <h6>Modern Chair</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+</html>
